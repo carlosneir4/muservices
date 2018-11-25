@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockFilterChain;
 import org.springframework.mock.web.MockHttpServletRequest;
@@ -25,9 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = AuthServiceApplication.class)
-@TestPropertySource(locations="classpath:application-test.properties")
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class JwtAuthenticationFilterTest {
 
     private MockHttpServletRequest request;

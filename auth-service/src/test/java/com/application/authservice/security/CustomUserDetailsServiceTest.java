@@ -12,6 +12,7 @@ import org.mockito.Mock;
 
 import org.mockito.MockitoAnnotations;
 
+import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,9 +28,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = AuthServiceApplication.class)
-@TestPropertySource(locations="classpath:application-test.properties")
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class CustomUserDetailsServiceTest {
 
     @InjectMocks

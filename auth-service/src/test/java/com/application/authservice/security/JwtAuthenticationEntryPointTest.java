@@ -4,6 +4,7 @@ import com.application.authservice.AuthServiceApplication;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -20,9 +21,7 @@ import java.io.IOException;
 import static org.junit.Assert.assertEquals;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = AuthServiceApplication.class)
-@TestPropertySource(locations="classpath:application-test.properties")
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class JwtAuthenticationEntryPointTest {
 
     private JwtAuthenticationEntryPoint authenticationEntryPoint;
